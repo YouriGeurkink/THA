@@ -1,0 +1,61 @@
+/* general */
+body {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.KouContainer {
+    margin: 50px auto 150px auto;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    height: 20%;
+}
+
+.WarmteContainer {
+    margin: 30px auto 50px auto;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    height: 20%;
+}
+
+.marginTopBottom {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Currency */
+.currencyContainer {
+    display: flex;
+}
+
+.TempWarmte {
+    display: flex;
+    margin: 20px 0 20px 0px;
+}
+
+.TempKou {
+    display: flex;
+    margin: 20px 0 20px 0px;
+}
+
+.TIW {
+    margin: auto;
+}
+
+.TIK {
+    margin: auto;
+}
+
+#BerekenKou {
+    width: 100%;
+}
+
+#BerekenWarmte {
+    width: 100%;
+}

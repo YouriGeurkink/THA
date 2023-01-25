@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Temperatuursindex</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+  <!-- Kou -->
+  <div class="display-4 text-center">Temperatuursindex</div>
+  <div class="KouContainer">
+    <h4>Kou</h4>
+    <div class="currencyContainer">
+      <div style="margin-top: 16px">
+          <p>Temperatuur </p>
+          <p>Windsnelheid </p>
+      </div>
+      <div style="margin-left: 20px">
+        <input class="form-control marginTopBottom" type="number" id="TempKou" value="">
+        <input class="form-control marginTopBottom" type="number" id="Windsnelheid" value="">
+        <button class="btn btn-primary" id="BerekenKou"onClick="getTIK()">Bereken</button>
+      </div>
+      <div class="TIK">
+        <h4 id="TIK">Temperatuursindex: </h4>
+      </div>
+    </div>
+  </div>
+
+    <!-- Warmte -->
+    <div class="WarmteContainer">
+      <h4><b>Warmte</b></h4>
+      <div class="currencyContainer">
+        <div style="margin-top: 16px">
+            <p>Temperatuur </p>
+            <p>Luchtvochtigheid </p>
+        </div>
+        <div style="margin-left: 20px">
+          <input class="form-control marginTopBottom" type="number" id="TempWarmte" value="">
+          <input class="form-control marginTopBottom" type="number" id="Luchtvochtigheid" value="">
+          <button class="btn btn-primary" id="BerekenWarmte" onClick="getTIW()">Bereken</button>
+        </div>
+        <div class="TIW">
+          <h4 id="TIW">Temperatuursindex: </h4>
+          <h4 id="TIW">Omstandigheden: </h4>
+        </div>
+      </div>
+    </div>
+
+  <script>
+  function getTIK()
+    {
+      let TempK = Number(document.getElementById('TempKou').value);
+      let Windsnelheid = Number(document.getElementById('Windsnelheid').value);
+      let sumKou = TempK + Windsnelheid;
+      console.log(sumKou);
+      document.getElementById("TIK").textContent = "Temperatuursindex: "+sumKou;
+    };
+
+  function getTIW()
+    {
+        let TempW = Number(document.getElementById('TempWarmte').value);
+        let LuchtV = Number(document.getElementById('Luchtvochtigheid').value);
+        const sumWarmte = TempW * LuchtV;
+        console.log(sumWarmte);
+        document.getElementById("TIW").textContent = "Temperatuursindex: "+sumWarmte;
+    };
+
+    
+    </script>
+
+</body>
+
+</html>
